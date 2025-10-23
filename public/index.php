@@ -7,10 +7,13 @@ $isPremiumUser = true;     // Tipo Boolean
 
 // Bloque de configuración principal
 
-include "/../app/views/header.php"
+        include "../app/views/header.php";
+?>
 
         <h2>Perfil del Usuario</h2>
         <p><strong>Nombre:</strong> <?php echo $userName; ?></p>
         <p><strong>Edad:</strong> <?php echo $userAge; ?> años</p>
         <p><strong>Estado de la cuenta:</strong> Usuario <?php echo $isPremiumUser ? "Premium" : "Estándar"; ?></p>
-include "/../app/views/footer.php" 
+<?php
+        include "../app/views/footer.php";
+?>
