@@ -5,8 +5,35 @@ $userName = "Sergio"; // Tipo String
 $userAge = 21;             // Tipo Integer
 $isPremiumUser = true;     // Tipo Boolean
 
-// Bloque de configuración principal
+$tasks=[
+    [
+        'title' => 'Preparar la presentación del proyecto',
+        'completed' => false,
+        'priority' => 'alta'
+    ],
+    [
+        'title' => 'Enviar informe semanal al jefe',
+        'completed' => true,
+        'priority' => 'media'
+    ],
+    [
+        'title' => 'Actualizar el sitio web',
+        'completed' => false,
+        'priority' => 'alta'
+    ],
+    [
+        'title' => 'Hacer copia de seguridad de los datos',
+        'completed' => true,
+        'priority' => 'baja'
+    ],
+    [
+        'title' => 'Revisar correos pendientes',
+        'completed' => false,
+        'priority' => 'media'
+    ]
+];
 
+// Bloque de configuración principal      
         include "../app/views/header.php";
 ?>
 
@@ -14,6 +41,7 @@ $isPremiumUser = true;     // Tipo Boolean
         <p><strong>Nombre:</strong> <?php echo $userName; ?></p>
         <p><strong>Edad:</strong> <?php echo $userAge; ?> años</p>
         <p><strong>Estado de la cuenta:</strong> Usuario <?php echo $isPremiumUser ? "Premium" : "Estándar"; ?></p>
+
 <?php
         include "../app/views/footer.php";
 ?>
