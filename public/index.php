@@ -33,7 +33,7 @@ $tasks=[
     ]
 ];
 
-// Bloque de configuración principal      
+
         include "../app/views/header.php";
 ?>
 
