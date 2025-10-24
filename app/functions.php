@@ -2,8 +2,8 @@
 
 function obtenerClasePrioridad($prioridad)
 {
-    $clases = 'task-item';
-    switch ($tarea['prioridad']) 
+    $clases='';
+    switch ($prioridad) 
     {
             case 'alta':
                 $clasesTarea .= ' priority-alta';
