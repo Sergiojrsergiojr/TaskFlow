@@ -1,47 +1,23 @@
 <?php
-define("SITE_NAME","TaskFlow");
-$pageTitle=SITE_NAME." - Página de Inicio";
-$userName = "Sergio"; // Tipo String
-$userAge = 21;             // Tipo Integer
-$isPremiumUser = true;     // Tipo Boolean
 
-$tasks=[
-    [
-        'title' => 'Preparar la presentación del proyecto',
-        'completed' => false,
-        'priority' => 'alta'
-    ],
-    [
-        'title' => 'Enviar informe semanal al jefe',
-        'completed' => true,
-        'priority' => 'media'
-    ],
-    [
-        'title' => 'Actualizar el sitio web',
-        'completed' => false,
-        'priority' => 'alta'
-    ],
-    [
-        'title' => 'Hacer copia de seguridad de los datos',
-        'completed' => true,
-        'priority' => 'baja'
-    ],
-    [
-        'title' => 'Revisar correos pendientes',
-        'completed' => false,
-        'priority' => 'media'
-    ]
+require_once '../app/functions.php';
+// Datos de las tareas (simulando una base de datos)
+$tareas = [
+    ['titulo' => 'Configurar el entorno de desarrollo', 'completado' => true, 'prioridad' => 'alta'],
+    ['titulo' => 'Crear la estructura de carpetas', 'completado' => true, 'prioridad' => 'alta'],
+    ['titulo' => 'Diseñar la base de datos', 'completado' => false, 'prioridad' => 'media'],
+    ['titulo' => 'Implementar el sistema de login', 'completado' => false, 'prioridad' => 'alta'],
+    ['titulo' => 'Crear la vista de tareas', 'completado' => false, 'prioridad' => 'baja']
 ];
 
-
-        include "../app/views/header.php";
+include '../app/views/header.php';
 ?>
 
-        <h2>Perfil del Usuario</h2>
-        <p><strong>Nombre:</strong> <?php echo $userName; ?></p>
-        <p><strong>Edad:</strong> <?php echo $userAge; ?> años</p>
-        <p><strong>Estado de la cuenta:</strong> Usuario <?php echo $isPremiumUser ? "Premium" : "Estándar"; ?></p>
+<h2>Tareas Pendientes</h2>
+<ul>
+    <?php foreach ($tareas as $tarea) : ?>
+        <?php echo renderizarTarea($tarea); ?>
+    <?php endforeach; ?>
+</ul>
 
-<?php
-        include "../app/views/footer.php";
-?>
+<?php include '../app/views/footer.php'; ?>
