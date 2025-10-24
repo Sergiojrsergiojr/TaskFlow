@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TaskFlow</title>
     <style>
@@ -15,8 +16,11 @@
         .priority-baja { border-left-color: #22c55e; }
         header, footer { text-align: center; color: #475569; }
     </style>
+
+    <title><?php echo $pageTitle?></title>
 </head>
 <body>
+    
     <header>
         <h1>Mi Lista de Tareas</h1>
     </header>

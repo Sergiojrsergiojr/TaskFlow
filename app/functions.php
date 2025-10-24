@@ -3,7 +3,8 @@
 function obtenerClasePrioridad($prioridad)
 {
     $clasesTarea = '';
-    switch ($prioridad) 
+    
+     switch ($prioridad) 
     {
             case 'alta':
                 $clasesTarea .= ' priority-alta';
@@ -15,6 +16,7 @@ function obtenerClasePrioridad($prioridad)
                 $clasesTarea .= ' priority-baja';
                 break;
     }
+
     return $clasesTarea;
 }
 
