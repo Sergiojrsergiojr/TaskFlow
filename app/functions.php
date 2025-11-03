@@ -15,6 +15,9 @@ function obtenerClasePrioridad($prioridad)
             case 'baja':
                 $clasesTarea .= ' priority-baja';
                 break;
+            default:
+                // No se asigna ninguna clase si la prioridad no coincide
+                break;
     }
 
     return $clasesTarea;
@@ -27,6 +30,7 @@ function renderizarTarea($tarea)
     {
         $clasePrioridad.='completed';
     }
+    $tituloSeguro = htmlspecialchars($tarea['titulo'], ENT_QUOTES, 'UTF-8');
     return "<li class='$clasePrioridad'>{$tarea['titulo']}</li>";
 }
 ?>
